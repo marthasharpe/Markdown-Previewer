@@ -1,4 +1,6 @@
 import React from 'react';
+import Editor from './Editor';
+import Preview from './Preview';
 
 class Container extends React.Component {
     state = {
@@ -10,12 +12,8 @@ class Container extends React.Component {
     render() {
       return (
         <div>
-          <textarea
-              id="editor"
-              value={this.state.input}
-              onChange={this.handleChange}
-              />
-          <p>{this.state.input}</p>
+          <Editor input={this.state.input} handleChange={this.handleChange}/>
+          <Preview input={this.state.input}/>
         </div>
       );
     }

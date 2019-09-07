@@ -10,7 +10,7 @@ const preview = {
 function Preview(props) {
     return (
         <div style={preview}>
-            <p id="preview">{props.input}</p>
+            <div id="preview" dangerouslySetInnerHTML={props.markdownText}></div>
         </div>
     )
 }

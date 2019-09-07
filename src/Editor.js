@@ -9,11 +9,12 @@ const editor = {
 function Editor(props) {
     return (
         <div style={editor}>
+            <h1 style={{color: "white"}}>Editor</h1>
             <textarea
             id="editor"
             value={props.input}
             onChange={props.handleChange}
-            style={{width: "80%", minHeight: 300, padding: 10}}
+            style={{width: "80%", height: 400, padding: "1rem"}}
             />
         </div>
     )
